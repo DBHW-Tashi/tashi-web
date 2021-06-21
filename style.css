@@ -25,7 +25,8 @@ body {
 .display {
     float: right;
     position: relative;
-    width: 80%;
+    width: 100%;
+    max-width: 80vw;
     height: 80px;
     margin-bottom: 10px;
     word-wrap: break-word;
@@ -33,6 +34,11 @@ body {
 
 .display #result {
     font-size: 2em;
+}
+
+.all-buttons {
+    width: 100%;
+    margin-top: 200px;
 }
 
 .buttons {
@@ -80,7 +86,8 @@ body {
 }
 
 #history {
+    text-align: right;
     position: absolute;
-    bottom: 5px;
+    top: 150px;
     right: 0;
 }
