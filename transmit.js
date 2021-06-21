@@ -1,7 +1,7 @@
 function transmit(textfield) {
         var request = new XMLHttpRequest();
         var params = JSON.stringify({"exp":textfield});
-        request.open('POST', 'http://localhost:8080/compute', true);
+        request.open('POST', 'http://pass.anticitizen.space/compute', true);
         request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         request.send(params);
 
