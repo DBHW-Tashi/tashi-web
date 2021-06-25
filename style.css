@@ -20,6 +20,7 @@ body {
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.18);
     background: #3c415c;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .display {

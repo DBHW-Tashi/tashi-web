@@ -6,9 +6,10 @@ function transmit(textfield) {
         request.send(params);
 
         request.onload = function() {
-            document.querySelector('#history').innerHTML += "<br>" + document.querySelector('#result').innerHTML + " = ";
-            var result = JSON.parse(request.responseText).result;
-            document.querySelector('#result').innerHTML = result;
-            document.querySelector('#history').innerHTML += result;
+            var buffer = document.querySelector('#history').innerHTML;
+            document.querySelector('#history').innerHTML = "<br>" + document.querySelector('#result').innerHTML + " = ";
+            var expResult = JSON.parse(request.responseText).result;
+            document.querySelector('#result').innerHTML = expResult;
+            document.querySelector('#history').innerHTML += expResult + buffer;
         }
     }

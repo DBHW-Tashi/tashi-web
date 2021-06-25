@@ -9,15 +9,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	let val_btn = document.querySelectorAll('#val_btn');
 
-
-	let initial_value = "";
-
 	// Listeners for all buttons to enter their value
 	val_btn.forEach((val_btn, index)=>{
 		val_btn.addEventListener('click', function(){
 			let text = this.innerHTML;
-			initial_value += text;
-			result.innerHTML = initial_value;
+			result.innerHTML += text;
 		});
 	});
 
@@ -33,13 +29,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	// Clear all numbers
 	clear.addEventListener('click', function(){
 		result.innerHTML = "";
-		initial_value = "";
 	});
 
 	// Delete a single number
 	delete_num.addEventListener('click', function(){
 		result.innerHTML = result.innerHTML.substring(0,result.innerHTML.length-1);
-		initial_value = result.innerHTML;
 	});
 
 });
